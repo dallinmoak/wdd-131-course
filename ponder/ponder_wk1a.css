@@ -1,0 +1,40 @@
+body {
+	background-color: #ddd;
+	font-size: 20px;
+}
+
+#content {
+	max-width: 60%;
+	margin: 40px auto;
+	border: 2px solid #CCC;
+	padding: 40px;
+}
+
+img {
+	width: 70%;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+h1, h2, p {
+	text-align: center;
+}
+
+.list {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+#topics {
+	width: 60%;
+	margin: 0 auto;
+}
+
+p {
+	color: blue;
+}
+
+hr {
+	border: 1px solid blue;
+}

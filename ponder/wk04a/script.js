@@ -7,7 +7,11 @@ const closeButton = modal.querySelector(".close-viewer");
 gallery.addEventListener("click", openModal);
 
 function openModal(e) {
-  // Code to show modal  - Use event parameter 'e'
+  const dialogImageEl = document.querySelector("dialog img");
+  if (e.target.tagName === "IMG") {
+    modalImage.src = e.target.src.replace("sm", "full");
+    modal.showModal();
+  }
 }
 // Close modal on button click
 closeButton.addEventListener("click", () => {

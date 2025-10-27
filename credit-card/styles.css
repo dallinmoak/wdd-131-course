@@ -121,3 +121,7 @@ label,
   grid-column: 2;
   margin: 0.3em;
 }
+
+#form-error {
+  color: rgb(156, 0, 0);
+}

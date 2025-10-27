@@ -1,0 +1,123 @@
+:root {
+  --x-offset: 85px;
+  --y-offset: 36px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: var(--x-offset) 1fr var(--x-offset) var(--x-offset);
+  grid-template-rows: var(--y-offset) auto var(--y-offset) 30px;
+  width: 500px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+form .card-front {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* row-gap: 40px; */
+}
+
+form .card-back {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+}
+
+form button {
+  height: fit-content;
+  width: fit-content;
+  justify-self: right;
+  align-self: center;
+  grid-column: 3;
+  grid-row: 4;
+}
+
+form .card-back,
+form .card-front {
+  background-color: #a0a0a0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form .total {
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 20px 0;
+  align-self: end;
+}
+
+form .card-number {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  margin: 15px 0;
+}
+
+form .card-number input{
+  width: 140px;
+}
+
+form .card-name {
+  grid-column: 1;
+  grid-row: 3;
+  height: fit-content;
+  align-self: end;
+  margin-bottom: 15px;
+}
+
+form .card-name input {
+  width: 90%;
+}
+
+form .card-expiration {
+  grid-column: 2;
+  grid-row: 3;
+  height: fit-content;
+  align-self: end;
+  margin-bottom: 15px;
+}
+
+form .card-expiration label {
+  display: block;
+  width: 100%;
+}
+
+input#month,
+input#year {
+  width: 25px;
+}
+
+label,
+.card-code,
+.card-expiration {
+  margin: 0.3em;
+  text-transform: uppercase;
+}
+
+.card-back {
+  display: grid;
+  grid-template-rows: auto auto var(--y-offset);
+  grid-template-columns: auto var(--x-offset);
+}
+
+.card-back .magnet-strip {
+  margin-top: 20px;
+  background-color: black;
+  height: 40px;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.card-back .card-code {
+  grid-column: 2;
+  margin: 0.3em;
+}

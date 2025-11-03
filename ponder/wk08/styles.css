@@ -1,0 +1,9 @@
+div.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title img {
+  height: 80px;
+}

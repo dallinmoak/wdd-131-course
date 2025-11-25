@@ -1,13 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --primary: #366096;
   --secondary: #f0f2f5;
-  --accent1: #53A4A5;
+  --accent1: #53a4a5;
   --accent2: #210203;
   --accent2-light: #2102031b;
+
+  --heading-font: "Goldman", sans-serif;
+  --paragraph-font: "Noto Sans", sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--paragraph-font);
   background-color: var(--secondary);
   color: var(--accent2);
   margin: 0;
@@ -28,7 +33,14 @@ header {
 }
 
 header a.logo {
-  color: var(--secondary)
+  color: var(--secondary);
+}
+
+header nav li {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  display: inline;
+  margin: 0 15px;
 }
 
 article {
@@ -40,7 +52,20 @@ article {
   text-decoration: none;
 }
 
+article h2 {
+  font-family: var(--heading-font);
+}
+
 article:hover {
-  /* background: #fff; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+div.filter {
+  margin: 20px;
+}
+
+div.filter select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
 }

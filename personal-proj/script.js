@@ -35,7 +35,7 @@ const filterMU = `
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.insertAdjacentHTML("afterbegin", headerMU);
+  document.body.insertAdjacentHTML("afterbegin", headerMU());
 
   document.body.insertAdjacentHTML("beforeend", layoutMU);
 

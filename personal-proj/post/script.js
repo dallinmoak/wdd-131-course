@@ -15,7 +15,7 @@ const postDetailTemplate = (post, author) => `
 const likeTemplate = (like) => `<a href="../author/index.html?id=${like}">${authors.find(a => a.id == like).name}</a>`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.insertAdjacentHTML("afterbegin", headerMU);
+  document.body.insertAdjacentHTML("afterbegin", headerMU('..'));
   
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");

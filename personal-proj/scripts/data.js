@@ -191,6 +191,7 @@ const posts = [
     id: 5,
     authorId: 0,
     content: "I'm not nessisarily afraid of bears, but I usually avoid them in the woods. I'm glad that drugs aren't real.",
+    date: "2024-06-05",
     likes: [4, 24, 17, 23],
   },
   {

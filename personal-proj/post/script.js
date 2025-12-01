@@ -1,10 +1,20 @@
-import {headerMU} from "../scripts/common.js";
-import {posts, authors} from "../scripts/data.js";
+import { headerMU } from "../scripts/common.js";
+import { posts, authors } from "../scripts/data.js";
 
 const postDetailTemplate = (post, author) => `
 <main>
   <article class="post-detail">
-    <h2>Post by ${author.name}</h2>
+    <div class="author-info">
+      <img
+        src="${author.profilePic}"
+        alt="${author.name}'s profile picture"
+      />
+      <div>
+        <h2>${author.name}</h2>
+        <p>${author.bio}</p>
+      </div>
+    </div>
+    <hr />
     <p>${post.content}</p>
     <p><strong>Date:</strong> ${post.date || "Unknown"}</p>
     <p><strong>Likes:</strong> ${post.likes.map(likeTemplate).join(", ")}</p>
@@ -12,11 +22,14 @@ const postDetailTemplate = (post, author) => `
 </main>
 `;
 
-const likeTemplate = (like) => `<a href="../author/index.html?id=${like}">${authors.find(a => a.id == like).name}</a>`;
+const likeTemplate = (like) =>
+  `<a href="../author/index.html?id=${like}">${
+    authors.find((a) => a.id == like).name
+  }</a>`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.insertAdjacentHTML("afterbegin", headerMU('..'));
-  
+  document.body.insertAdjacentHTML("afterbegin", headerMU(".."));
+
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
@@ -34,4 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
-
